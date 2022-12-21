@@ -10,6 +10,9 @@
     </section>
     <section>
         <div class="container">
+            <div class="news text-end mt-3">
+                <a href="{{ route('comics.create') }}" class="btn btn-primary">Add New Comics</a>
+            </div>
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
