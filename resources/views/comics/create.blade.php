@@ -9,7 +9,8 @@
             <div class="form">
                 <div class="row justify-content-center">
                     <div class="col-8">
-                        <form action="" method="">
+                        <form action="{{ route('comics.store') }}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label for="title">Titolo</label>
                                 <input type="text" class="form-control mt-1" id="title" name="title"
