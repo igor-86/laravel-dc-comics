@@ -37,7 +37,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        /* Validation controllo dati */
 
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'description' => 'required|min:10',
+            'image' => 'required',
+            'price' => 'required|max:50',
+            'series' => 'required|max:100',
+            'type' => 'required|max:100'
+        ]);
+        /* Se una delle condizioni di sopra (guarda su) non viene rispettata, Laravel non procede con il codice di seguito */
         $data = $request->all();
         $comic = new Comic();
         $comic->title = $data['title'];
