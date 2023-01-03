@@ -25,7 +25,7 @@
                             <div class="mb-3">
                                 <label for="title">Titolo</label>
                                 <input type="text" class="form-control mt-1 @error('title') is-invalid @enderror"
-                                    id="title" name="title" placeholder="Scrivi qui">
+                                    id="title" name="title" placeholder="Scrivi qui" value="{{ old('title') }}">
                                 @error('title')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -35,7 +35,9 @@
                             <div class="mb-3">
                                 <label for="description">Descrizione</label>
                                 <textarea name="description" id="description" rows="10" placeholder="Scrivi qui"
-                                    class="form-control @error('description') is-invalid @enderror"></textarea>
+                                    class="form-control @error('description') is-invalid @enderror">
+                                    {{ old('description') }}
+                                </textarea>
                                 @error('description')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -45,7 +47,8 @@
                             <div class="mb-3">
                                 <label for="image">Link Immagine</label>
                                 <input type="text" class="form-control mt-1 @error('image') is-invalid @enderror"
-                                    id="image" name="image" placeholder="Copia link immagine">
+                                    id="image" name="image" placeholder="Copia link immagine"
+                                    value="{{ old('image') }}">
                                 @error('image')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -55,7 +58,7 @@
                             <div class="mb-3">
                                 <label for="price">Prezzo</label>
                                 <input type="text" class="form-control mt-1 @error('price') is-invalid @enderror"
-                                    id="price" name="price" placeholder="Scrivi qui">
+                                    id="price" name="price" placeholder="Scrivi qui" value="{{ old('price') }}">
                                 @error('price')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -65,7 +68,7 @@
                             <div class="mb-3">
                                 <label for="series">Serie</label>
                                 <input type="text" class="form-control mt-1 @error('series') is-invalid @enderror"
-                                    id="series" name="series" placeholder="Scrivi qui">
+                                    id="series" name="series" placeholder="Scrivi qui" value="{{ old('series') }}">
                                 @error('series')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -75,7 +78,7 @@
                             <div class="mb-3">
                                 <label for="type">Tipologia</label>
                                 <input type="text" class="form-control mt-1 @error('type') is-invalid @enderror"
-                                    id="type" name="type" placeholder="Scrivi qui">
+                                    id="type" name="type" placeholder="Scrivi qui" value="{{ old('type') }}">
                                 @error('type')
                                     <div class="invalid-feedback">
                                         {{ $message }}
